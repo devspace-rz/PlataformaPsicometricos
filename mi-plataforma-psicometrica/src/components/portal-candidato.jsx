@@ -50,7 +50,7 @@ export default function PortalCandidato() {
       const { error } = await supabase
         .from('resultados_candidatos')
         .insert([resultadoParaGuardar]);
-      console.log("Respuesta de Supabase:", { data, error });
+     
 
       if (error) {
         console.error("Error al guardar:", error);
