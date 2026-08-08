@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from '../supabase';
 
 const INK = "#1B2340";
 const INK_SOFT = "#4A5170";
