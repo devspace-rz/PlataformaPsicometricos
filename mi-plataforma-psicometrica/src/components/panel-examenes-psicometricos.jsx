@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { supabase } from '../supabase'; // <--- Tu conexión
+import { supabase } from '../supabase'; 
 import {
   RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar,
   ResponsiveContainer,
@@ -17,7 +17,7 @@ export default function PanelRH() {
   const [candidatosDB, setCandidatosDB] = useState([]);
   const [seleccionado, setSeleccionado] = useState(null);
 
-  // Consultar Supabase al cargar el panel
+
   useEffect(() => {
     async function cargarCandidatos() {
       const { data, error } = await supabase
@@ -25,7 +25,7 @@ export default function PanelRH() {
         .select('*');
 
       if (!error && data) {
-        // Mapeamos los datos de la BD al formato que lee tu diseño
+        
         const formateados = data.map(item => ({
           id: item.id,
           nombre: item.nombre,
@@ -50,7 +50,7 @@ export default function PanelRH() {
   }, []);
 
   const vacanteInfo = VACANTES_CONFIG.find((v) => v.id === vacanteId);
-  // Filtramos los candidatos que pertenecen a la vacante seleccionada
+  
   const candidatosFiltrados = candidatosDB.filter(c => c.vacanteId === vacanteId);
 
   const vacante = {
@@ -63,7 +63,6 @@ export default function PanelRH() {
     : [];
 
   return (
-    // ... Tu estructura visual de RH se queda exactamente igual, 
-    // mapeando sobre 'vacante.candidatos' que ahora viene vivo de Supabase ...
+    
   );
 }
