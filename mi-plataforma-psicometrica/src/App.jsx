@@ -1,6 +1,6 @@
 import { useState } from "react";
-import PanelRH from "./components/PanelRH";
-import PortalCandidato from "./components/PortalCandidato";
+import PanelRH from "./components/panel-examenes-psicometricos";
+import PortalCandidato from "./components/portal-candidato";
 
 export default function App() {
   // Estado temporal para alternar entre vistas mientras desarrollas
