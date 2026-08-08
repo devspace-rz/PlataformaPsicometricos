@@ -5,7 +5,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-// ... (constantes de diseño, perfil y estadoStyle se quedan igual) ...
 
 const VACANTES_CONFIG = [
   { id: "dev", nombre: "Desarrollador Backend", examen: "Examen técnico-conductual DEV-03" },
